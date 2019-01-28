@@ -1,0 +1,13 @@
+TARGAT = libkernel.a
+
+OBJS = printk.o vsprintf.o interrupts.o \
+		chr_drv/tty_io.o chr_drv/console.o \
+		panic.o sched.o system_call.o fork.o sys.o
+
+$(TARGAT) : $(OBJS)
+	$(AR) $(ARFLAG) $(TARGAT) $(OBJS)
+
+%.o : %.c
+	$(CC) -c $(CFLAG)   -o $@ $<
+
+	

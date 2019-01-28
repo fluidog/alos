@@ -1,0 +1,2 @@
+
+#define KERNEL_VIR_BASE (u32)0xc0000000

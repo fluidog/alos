@@ -1,0 +1,9 @@
+TARGAT = libsys.a
+
+OBJS = string.o  ctype.o malloc.o write.o execve.o
+$(TARGAT) : $(OBJS) 
+	$(AR) $(ARFLAG) $(TARGAT) $(OBJS)
+
+%.o : %.c
+	$(CC) -c $(CFLAG)   -o $@ $<
+

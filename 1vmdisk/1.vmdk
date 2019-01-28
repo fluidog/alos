@@ -1,0 +1,27 @@
+# Disk DescriptorFile
+version=1
+encoding="GBK"
+CID=e3c18c6d
+parentCID=ffffffff
+createType="monolithicFlat"
+
+# Extent description
+RW 2097152 FLAT "1-flat.vmdk" 0
+
+# The Disk Data Base 
+#DDB
+
+ddb.adapterType = "ide"
+ddb.geometry.cylinders = "2080"
+ddb.geometry.heads = "16"
+ddb.geometry.sectors = "63"
+ddb.longContentID = "f6ac1a308380b1383913a676e3c18c6d"
+ddb.uuid = "60 00 C2 9f 65 e3 ba f6-3a 60 b1 f0 85 64 78 5b"
+ddb.virtualHWVersion = "12"
+ddb.uuid.image="4b33090d-5d5a-4276-9fe7-99cf2577fec3"
+ddb.uuid.modification="47fab264-2535-4f9c-9ad2-45605ddb3d85"
+ddb.uuid.parent="00000000-0000-0000-0000-000000000000"
+ddb.uuid.parentmodification="00000000-0000-0000-0000-000000000000"
+ddb.geometry.biosCylinders="520"
+ddb.geometry.biosHeads="64"
+ddb.geometry.biosSectors="63"

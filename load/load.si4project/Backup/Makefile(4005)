@@ -1,0 +1,21 @@
+OBJS:=load.o fat.o memory.o
+
+CFALG:=-I include -fno-asynchronous-unwind-tables 
+TEXT_BASE:=0x400 
+LDFLAG:=-Ttext $(TEXT_BASE) -T load.lds 
+
+	
+load.bin:$(OBJS) 
+	ld $(LDFLAG) -nostartfiles -e main -o load.elf $^
+	objcopy -O binary -S load.elf $@
+	mount -o loop ../ext.img ../tmp_dir/
+	cp $@ ../tmp_dir/
+	umount ../tmp_dir
+
+%.o:%.c
+	$(CC) $(CFALG) -c $< 
+
+
+.PHONY : clean
+clean :
+	rm -f *.o load.bin load.elf 
