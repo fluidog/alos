@@ -1,9 +1,0 @@
-TARGAT = libext2.a
-
-OBJS = inode.o super.o namei.o open.o read_write.o file_dev.o 
-
-$(TARGAT) : $(OBJS)
-	$(AR) $(ARFLAG) $(TARGAT) $(OBJS)
-
-%.o : %.c
-	$(CC) -c $(CFLAG)   -o $@ $<

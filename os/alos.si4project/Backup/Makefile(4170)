@@ -1,9 +1,0 @@
-TARGAT = libfs.a
-
-OBJS = buffer.o block_dev.o
-
-$(TARGAT) : $(OBJS)
-	$(AR) $(ARFLAG) $(TARGAT) $(OBJS)
-
-%.o : %.c
-	$(CC) -c $(CFLAG)   -o $@ $<
